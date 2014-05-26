@@ -21,7 +21,7 @@
 
 		this.sActiveClass = activeClass;
 		this.nIndex = 0;
-		this.nItemsLen = this.nItemsLen;
+		this.nItemsLen = this.$prevItems.length;
 
 		this.init();
 	}
