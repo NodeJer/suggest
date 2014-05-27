@@ -101,6 +101,7 @@
 			this.$input.val(str);
 			this.$suggest.hide();
 			this.$nextfocus.focus();
+			this.$items.eq(this.nIndex).removeClass(this.sActiveClass);
 		},
 		storageItemsEmail: function(){
 			this.$items.each(function(){
@@ -147,8 +148,4 @@
 	};
 
 	return Suggest;
-<<<<<<< HEAD
-})
-=======
 });
->>>>>>> 1f911b688e8686e86ebcc1adef7c8034d39a7101
