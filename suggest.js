@@ -21,7 +21,7 @@
 
 		this.sActiveClass = activeClass;
 		this.nIndex = 0;
-		this.nItemsLen = this.nItemsLen;
+		this.nItemsLen = this.$prevItems.length;
 
 		this.init();
 	}
@@ -60,14 +60,14 @@
 			}
 		},
 		blur: function(){
-			setTimeout($.proxy(function(){ this.$suggest.hide() }, this), 30);
+			setTimeout($.proxy(function(){ this.$suggest.hide() }, this), 400);
 		},
 		keydown: function(ev){
 			if(this.$input.val() == '')return;
 
 			if(ie9){
 				if(ev.which === 8){
-					setTimeout($.proxy(this.input, this), 30);
+					setTimeout($.proxy(this.input, this), 66);
 				}
 					
 			}
@@ -147,4 +147,4 @@
 	};
 
 	return Suggest;
-});
+})
